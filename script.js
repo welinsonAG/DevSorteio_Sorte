@@ -1,10 +1,24 @@
-function generateNumber () {
+  // Seleciona o botão e associa o evento de clique
+  document.getElementById('btnSortear').addEventListener('click', generateNumber);
 
-  const minInput = Math.ceil(document.querySelector(".input-min").value)
-const maxInput = Math.floor(document.querySelector(".input-max").value)
+  function generateNumber() {
+    // Converte string em inteiro e arredonda para baixo/acima apropriadamente
+    const minValue = Number(document.querySelector('.input-min').value);  
+    const maxValue = Number(document.querySelector('.input-max').value);  
 
-const result = Math.floor(Math.random() * (maxInput - minInput + 1)) + minInput;
+    // Validação: campos não podem estar vazios ou não numéricos
+    if (isNaN(minValue) || isNaN(maxValue)) {
+      alert('Por favor, insira valores numéricos válidos.');  
+      return;
+    }
 
-alert(result);
-  
-}
+    // Garantir ordenação correta mesmo se usuário inverter min e max
+    const min = Math.ceil(Math.min(minValue, maxValue));  
+    const max = Math.floor(Math.max(minValue, maxValue));  
+
+    // Gera número aleatório inteiro entre min e max (inclusivo)
+    // Fórmula: floor(random() * (max - min + 1)) + min
+    const result = Math.floor(Math.random() * (max - min + 1)) + min;  
+
+    alert(`Número sorteado: ${result}`);
+  }

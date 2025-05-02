@@ -1,25 +1,37 @@
-<!doctype html>
-<html lang="pr-br">
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sorteio_Dev</title>
-  <link href="/style.css" rel="stylesheet">
+  <title>Sorteio Dev</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <img src="assets/images.png">
-  <h1>Sorteio_Dev</h1>
-  <h2>Numeros Sorteado </h2>
+  <!-- Adicione alt à imagem para acessibilidade -->
+  <img src="assets/images.png" alt="Imagem ilustrativa do Sorteio Dev" />
+
+  <h1>Sorteio Dev</h1>
+  <h2>Números Sorteados</h2>
+
   <div>
-    <input placeholder="e"class="input-min" type="number">
-    <input placeholder="s" class="input-max" type="number">
-
+    <!-- Espaço e texto de placeholder ajustados -->
+    <input
+      type="number"
+      class="input-min"
+      placeholder="Início"
+      aria-label="Valor mínimo"
+    />
+    <input
+      type="number"
+      class="input-max"
+      placeholder="Fim"
+      aria-label="Valor máximo"
+    />
   </div>
-  <button onclick="generateNumber()">Sortear</button>
-  <script defer type=" text/javascript" src="/script.js"></script>
-</body>
 
+  <button onclick="generateNumber()">Sortear</button>
+
+  <!-- Removido espaço antes de "text/javascript" e uso de caminho relativo -->
+  <script defer src="script.js" type="text/javascript"></script>
+</body>
 </html>

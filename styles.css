@@ -1,0 +1,86 @@
+/* Importa apenas os pesos necessários do Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+/* Cabeçalhos */
+h1,
+h2 {
+  text-align: center;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 26px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 120px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* Container dos inputs para espaçamento automático */
+div {
+  display: flex;
+  gap: 61px;
+}
+
+/* Inputs */
+input {
+  width: 342px;
+  height: 74px;
+  padding-left: 20px;           /* corrige `padding: left 20px;` */
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 46px;
+  color: #d3d3d3;
+  opacity: 0.7;
+}
+
+/* Botão */
+button {
+  margin-top: 50px;
+  width: 342px;
+  height: 72px;
+  background: #AEC346;
+  border: none;
+  border-radius: 11px;
+  box-shadow: 0 18px 40px rgba(174, 195, 70, 0.35);
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  opacity: 0.8;                  /* faltava ponto-e-vírgula aqui */
+}
